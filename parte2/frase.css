@@ -8,10 +8,19 @@
 7 ritardare progressivamente l'animazione delle altre 2 parole 
 */
 @keyframes example {
-  from {
+  0% {
+    top: -15px;
+    opacity: 0;
+  }
+  25% {
+    top: 0;
     opacity: 1;
   }
-  to {
+  50% {
+    top: 8px;
+    opacity: 0;
+  }
+  100% {
     opacity: 0;
   }
 }
@@ -24,27 +33,44 @@ main {
   align-items: center;
   div {
     border: 3px solid gray;
-    font-size: 2.5em;
-    padding: 50px 60px;
+    font-size: 2em;
+    padding: 50px 40px;
     line-height: 50px;
+    width: 700px;
     span {
+      position: relative;
       i.parola1 {
+        position: absolute;
+        top: -3px;
+        left: 5px;
         animation-delay: 0s;
         animation-name: example;
         animation-duration: 5s;
         opacity: 0;
+        width: 300px;
+        color: blue;
       }
       i.parola2 {
+        position: absolute;
+        top: -3px;
+        left: 5px;
         animation-delay: 6s;
         animation-name: example;
         animation-duration: 5s;
         opacity: 0;
+        width: 300px;
+        color: rgb(208, 3, 240);
       }
       i.parola3 {
-        animation-delay: 9s;
+        position: absolute;
+        top: -3px;
+        left: 5px;
+        animation-delay: 10s;
         animation-name: example;
         animation-duration: 5s;
         opacity: 0;
+        width: 300px;
+        color: orange;
       }
     }
   }
