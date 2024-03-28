@@ -1,0 +1,81 @@
+/*
+1 creazione del testo e formattazione di 1 parola da far ruotare
+2 inserimento delle altre 2 parole
+3 sovrapporre le 3 parole
+4 mostrare 1 parola e nascondere le altre 2
+5 animare 1 parola (fadein - fadeout con spostamento)
+6 animare le altre 2 parole
+7 ritardare progressivamente l'animazione delle altre 2 parole 
+*/
+@keyframes example {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+main {
+  font-family: "Bree Serif", sans-serif;
+  display: flex;
+  justify-content: center;
+  height: 600px;
+  align-items: center;
+  div {
+    border: 3px solid gray;
+    font-size: 2.5em;
+    padding: 50px 60px;
+    line-height: 50px;
+    span {
+      i.parola1 {
+        animation-delay: 0s;
+        animation-name: example;
+        animation-duration: 5s;
+        opacity: 0;
+      }
+      i.parola2 {
+        animation-delay: 6s;
+        animation-name: example;
+        animation-duration: 5s;
+        opacity: 0;
+      }
+      i.parola3 {
+        animation-delay: 9s;
+        animation-name: example;
+        animation-duration: 5s;
+        opacity: 0;
+      }
+    }
+  }
+}
+/* main {
+    font-family: "Bree Serif", sans-serif;
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    align-items: center;
+    div {
+      border: 3px solid gray;
+      font-size: 2.5em;
+      padding: 50px 60px;
+      line-height: 50px;
+      span {
+        i.parola1 {
+          animation-delay: 3s;
+          animation: example 5s infinite;
+          opacity: 1;
+        }
+        i.parola2 {
+          animation-delay: 6s;
+          animation: example 5s infinite;
+          opacity: 0;
+        }
+        i.parola3 {
+          animation-delay: 9s;
+          animation: example 5s infinite;
+          opacity: 0;
+        }
+      }
+    }
+  } */
